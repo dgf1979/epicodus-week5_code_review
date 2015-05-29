@@ -9,6 +9,7 @@ $( document ).ready(function() {
 
 //raw js
 var findAndReplace = function(toSearch, find, replaceWith) {
-
-  return toSearch.replace(find, replaceWith);;
+   var regex = new RegExp(find,'g');
+   var result = toSearch.replace(regex, replaceWith)
+   return result;
 };
