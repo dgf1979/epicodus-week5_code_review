@@ -1,5 +1,5 @@
-describe('foo', function() {
-  it("is some function or expectation", function() {
-    expect(foo('bar')).to.equal(false);
+describe('findAndReplace', function() {
+  it("replaces one string with another string", function() {
+    expect(findAndReplace('bar','bar','foo')).to.equal('foo');
   });
 });

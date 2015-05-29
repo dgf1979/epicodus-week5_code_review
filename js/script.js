@@ -1,6 +1,5 @@
 "use strict";
 
-
 //jQuery
 $( document ).ready(function() {
     console.log( "jQuery Ready" );
@@ -9,6 +8,7 @@ $( document ).ready(function() {
 });
 
 //raw js
-var foo = function(bar) {
-  return false;
+var findAndReplace = function(toSearch, find, replaceWith) {
+
+  return toSearch.replace(find, replaceWith);;
 };
