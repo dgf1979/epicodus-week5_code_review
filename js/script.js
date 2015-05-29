@@ -4,7 +4,21 @@
 $( document ).ready(function() {
     console.log( "jQuery Ready" );
 
-    $("#jqtest").text('jQuery Ready')
+    $("#findAndReplace").submit(function(event) {
+      alert("OK!");
+      console.log(this.toString());
+      var ignoreCase = $("input#ignoreCase").is(':checked');
+      var textToSearch = $("textarea#toSearch").val();
+      var find = $("input#find").val();
+      var replaceWith = $("input#replaceWith").val();
+
+      var result = findAndReplace(textToSearch, find, replaceWith, ignoreCase);
+
+      $("div#result").text(result);
+
+      event.preventDefault();
+    });
+
 });
 
 //raw js

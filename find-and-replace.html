@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Find And Replace</title>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src='js/lib/jquery-1.11.3.js'></script>
+    <script src='js/script.js'></script>
+
+  </head>
+  <body>
+    <div id='fullsize'>
+      <div id='container'>
+        <div class='form-container'>
+          <form id='findAndReplace'>
+            <label for='toSearch'>Text to Search</label>
+            <textarea id='toSearch'></textarea>
+            <label for='ignoreCase'>
+              Ignore Case
+              <input type="checkbox" id='ignoreCase'>
+            </label>
+            <label for='find'>Word to Replace</label>
+            <input type='text' id='find'>
+            <label for='replaceWith'>Replace With Word</label>
+            <input type='text' id='replaceWith'>
+            <button type='submit' class="btn btn-large">Submit</button>
+          </form>
+        </div>
+        <div id='result'>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
