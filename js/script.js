@@ -5,10 +5,21 @@ $( document ).ready(function() {
     console.log( "jQuery Ready" );
 
     $("#findAndReplace").submit(function(event) {
+      event.preventDefault();
       var ignoreCase = $("input#ignoreCase").is(':checked');
       var textToSearch = $("textarea#toSearch").val();
       var find = $("input#find").val();
       var replaceWith = $("input#replaceWith").val();
+
+      if (!textToSearch) {
+        alert("No text to search!");
+        return;
+      }
+
+      if (!find) {
+        alert("No word to match!");
+        return;
+      }
 
       var result = findAndReplace(textToSearch, find, replaceWith, ignoreCase);
 
@@ -22,7 +33,7 @@ $( document ).ready(function() {
       //unhide the panel
       $("div#result-panel").css('visibility','visible');
 
-      event.preventDefault();
+
     });
 
 });
