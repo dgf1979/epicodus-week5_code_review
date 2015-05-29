@@ -5,8 +5,6 @@ $( document ).ready(function() {
     console.log( "jQuery Ready" );
 
     $("#findAndReplace").submit(function(event) {
-      alert("OK!");
-      console.log(this.toString());
       var ignoreCase = $("input#ignoreCase").is(':checked');
       var textToSearch = $("textarea#toSearch").val();
       var find = $("input#find").val();
@@ -15,6 +13,9 @@ $( document ).ready(function() {
       var result = findAndReplace(textToSearch, find, replaceWith, ignoreCase);
 
       $("div#result").text(result);
+
+      $("div#result-panel").css('width','auto');
+      $("div#result-panel").css('visibility','visible');
 
       event.preventDefault();
     });

@@ -12,22 +12,52 @@
   </head>
   <body>
     <div id='fullsize'>
-      <div id='container'>
+      <div class='section'>
+        <h2>Find And Replace</h2>
+        <br>
         <div class='form-container'>
-          <form id='findAndReplace'>
-            <label for='toSearch'>Text to Search</label>
-            <textarea id='toSearch'></textarea>
-            <label for='ignoreCase'>
-              Ignore Case
-              <input type="checkbox" id='ignoreCase'>
-            </label>
-            <label for='find'>Word to Replace</label>
-            <input type='text' id='find'>
-            <label for='replaceWith'>Replace With Word</label>
-            <input type='text' id='replaceWith'>
+          <form id='findAndReplace' class='form-horizontal'>
+
+            <div class='control-group'>
+              <label for='toSearch' class='control-label'>Text to Search</label>
+              <div class='controls'>
+                <textarea id='toSearch'></textarea>
+              </div>
+            </div>
+
+            <div class='control-group'>
+              <label for='ignoreCase' class='control-label'>Ignore Case</label>
+              <div class='controls'>
+                <label class='checkbox'>
+                  <input type="checkbox" class="checkbox" id='ignoreCase'>
+                </label>
+              </div>
+            </div>
+
+            <div class='control-group'>
+              <label for='find' class='control-label'>Word to Replace</label>
+              <div class='controls'>
+                <input type='text' id='find'>
+              </div>
+            </div>
+
+            <div class='control-group'>
+              <label for='replaceWith' class='control-label'>Replace With Word</label>
+              <div class='controls'>
+                <input type='text' id='replaceWith'>
+              </div>
+            </div>
+
             <button type='submit' class="btn btn-large">Submit</button>
+
           </form>
         </div>
+
+      </div>
+
+      <div class='section' id='result-panel'>
+        <h2>Results</h2>
+        <br>
         <div id='result'>
 
         </div>
