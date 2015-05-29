@@ -14,7 +14,12 @@ $( document ).ready(function() {
 
       $("div#result").text(result);
 
-      $("div#result-panel").css('width','auto');
+      var inputPanel = $("div#input-panel");
+      var resultPanel = $("div#result-panel");
+      //resize the result panel to match the input panel
+      resultPanel.width(inputPanel.width());
+      resultPanel.height(inputPanel.height());
+      //unhide the panel
       $("div#result-panel").css('visibility','visible');
 
       event.preventDefault();
