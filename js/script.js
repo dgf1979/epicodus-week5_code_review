@@ -8,8 +8,10 @@ $( document ).ready(function() {
 });
 
 //raw js
-var findAndReplace = function(toSearch, find, replaceWith) {
-   var regex = new RegExp(find,'g');
-   var result = toSearch.replace(regex, replaceWith)
-   return result;
+var findAndReplace = function(toSearch, find, replaceWith, matchAnyCase) {
+  var regexOptions = 'g'
+  if (matchAnyCase) { regexOptions += 'i'}
+  var regex = new RegExp('\\b' + find + '\\b',regexOptions);
+  var result = toSearch.replace(regex, replaceWith)
+  return result;
 };
