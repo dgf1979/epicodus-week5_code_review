@@ -7,7 +7,7 @@ div#fullsize {
   min-height: 100%;
   margin: auto;
   text-align: center;
-  background-color: silver;
+  background-color: #34495E;
 }
 
 div.section {
@@ -15,8 +15,8 @@ div.section {
   display: inline-block;
   margin: auto;
   max-width: 400px;
-  background-color: navy;
-  color: white;
+  background-color: #C0392b;
+  color: #ecf0f1;
   margin: 10px;
   padding: 10px;
   border-radius: 4px;
